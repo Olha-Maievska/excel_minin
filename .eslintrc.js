@@ -17,6 +17,8 @@ module.exports = {
         'indent': 'off',
         'quotes': 'off',
         'linebreak-style': 'off',
-        'eol-last': 'off'
+        'eol-last': 'off',
+        'no-debugger': 'off',
+        'object-curly-spacing': 'off',
     }
 }
