@@ -59,8 +59,9 @@
         outline: none;
 
         &.selected {
+            box-sizing: border-box;
             border: none;
-            outline: 2px solid $primary-color;
+            outline: 4px solid $primary-color;
             z-index: 2;
         }
     }
