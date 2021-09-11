@@ -20,5 +20,7 @@ module.exports = {
         'eol-last': 'off',
         'no-debugger': 'off',
         'object-curly-spacing': 'off',
+        'arrow-parens': 'off',
+        'operator-linebreak': 'off'
     }
 }
