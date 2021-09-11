@@ -8,10 +8,9 @@ export class Emitter {
         if (!Array.isArray(this.listeners[event])) {
             return false
         }
-        this.listeners[event].forEach((listener) => {
+        this.listeners[event].forEach(listener => {
             listener(...args)
         })
-
         return true
      }
     
@@ -21,11 +20,7 @@ export class Emitter {
         this.listeners[event].push(fn)
         return () => {
             this.listeners[event] =
-                this.listeners[event].filter((listener) => listener !== fn)
+                this.listeners[event].filter(listener => listener !== fn)
         }
     }
 }
-
-// const emitter = new Emitter()
-// emitter.subscribe('olha', (data) => console.log('sub', data))
-// emitter.emit('olha', 24)

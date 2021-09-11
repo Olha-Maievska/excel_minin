@@ -1,16 +1,16 @@
-import { capitalie } from "./utils"
+import { capitalize } from "./utils"
 
 export class DomListener {
     constructor($root, listeners = []) {
         if (!$root) {
             throw new Error('No $root provided for DomListener')
         }
-        this.$root= $root
+        this.$root = $root
         this.listeners = listeners
     }
 
     initDomListeners() {
-        this.listeners.forEach((listener) => {
+        this.listeners.forEach(listener => {
             const method = getMethodName(listener)
             const name = this.name || ''
             if (!this[method]) {
@@ -34,5 +34,5 @@ export class DomListener {
 }
 
 function getMethodName(eventName) {
-    return 'on' + capitalie(eventName)
+    return 'on' + capitalize(eventName)
 }
